@@ -1,0 +1,8 @@
+Request Date: 2025-12-31 00:00:00
+DayOfWeek: 3
+Range: 2025-12-31 09:00:00 - 2025-12-31 18:30:00
+Service ID: 1
+Duration: 30
+Local Appts: 0
+GCal Events: 0
+Total Slots Found: 38
