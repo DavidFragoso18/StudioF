@@ -21,7 +21,7 @@ import { Link } from '@inertiajs/vue3';
             <div class="flex flex-col items-center">
                 <h3 class="text-mocha font-bold uppercase tracking-widest mb-4">Contact</h3>
                 <p class="text-sm mb-2 text-gray-300">Fernanda Conde</p>
-                <p class="text-sm mb-2 text-gray-300">Le Praly 7, 1721 Misery-Courtion</p>
+                <p class="text-sm mb-2 text-gray-300">La Prairie 1, 1721 Cournillens, Suíça</p>
                 <a href="tel:0795019212" class="text-sm hover:text-mocha transition text-white">079 501 92 12</a>
             </div>
 

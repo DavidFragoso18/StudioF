@@ -535,14 +535,14 @@ const groupedServices = computed(() => {
                     <!-- Map -->
                     <!-- Map (Clickable to open Maps App) -->
                     <a 
-                        href="https://www.google.com/maps/search/?api=1&query=Le+Praly+7+1721+Misery-Courtion" 
+                        href="https://www.google.com/maps/search/?api=1&query=La+Prairie+1+1721+Cournillens+Su%C3%AD%C3%A7a" 
                         target="_blank"
                         rel="noopener noreferrer"
                         class="block h-[450px] w-full bg-gray-200 rounded-3xl overflow-hidden border border-concrete/30 shadow-xl group relative cursor-pointer"
                     >
                          <!-- Google Maps Embed -->
                         <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2737.5686000000005!2d7.107035!3d46.859684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDbCsDUxJzM0LjkiTiA3wrAwNiwyNS4zIkU!5e0!3m2!1sen!2sch!4v1612345678901!5m2!1sen!2sch" 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2737.5686000000005!2d7.1073825!3d46.8592719!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDbCsDUxJzM0LjkiTiA3wrAwNiwyNS4zIkU!5e0!3m2!1sen!2sch!4v1612345678901!5m2!1sen!2sch" 
                             width="100%" 
                             height="100%" 
                             style="border:0;" 
