@@ -207,7 +207,7 @@ const googleCalendarLink = computed(() => {
     const dates = `${formatTime(start)}/${formatTime(end)}`;
     const text = encodeURIComponent(`StudioF: ${lastBooking.value.serviceName}`);
     const details = encodeURIComponent("Rendez-vous confirmé chez StudioF.");
-    const location = encodeURIComponent("Le Praly 7, 1721 Misery-Courtion");
+    const location = encodeURIComponent("La Prairie 1, 1721 Cournillens, Suíça");
     
     return `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${text}&dates=${dates}&details=${details}&location=${location}`;
 });
@@ -227,7 +227,7 @@ DTSTART:${formatTime(start)}
 DTEND:${formatTime(end)}
 SUMMARY:StudioF: ${lastBooking.value.serviceName}
 DESCRIPTION:Rendez-vous confirmé.
-LOCATION:Le Praly 7, 1721 Misery-Courtion
+LOCATION:La Prairie 1, 1721 Cournillens, Suíça
 END:VEVENT
 END:VCALENDAR`;
 
@@ -509,8 +509,8 @@ const groupedServices = computed(() => {
                         <div class="space-y-10">
                              <div class="group">
                                 <h3 class="text-mocha text-sm font-bold uppercase tracking-widest mb-2 group-hover:text-charcoal transition">Adresse</h3>
-                                <p class="text-charcoal text-2xl font-serif">Le Praly 7</p>
-                                <p class="text-charcoal text-2xl font-serif">1721 Misery-Courtion</p>
+                                <p class="text-charcoal text-2xl font-serif">La Prairie 1</p>
+                                <p class="text-charcoal text-2xl font-serif">1721 Cournillens, Suíça</p>
                             </div>
 
                             <div class="group">
@@ -521,13 +521,7 @@ const groupedServices = computed(() => {
 
                             <div>
                                 <h3 class="text-mocha text-sm font-bold uppercase tracking-widest mb-4">Horaires</h3>
-                                <ul class="text-gray-600 space-y-3">
-                                    <li class="flex justify-between border-b border-gray-100 pb-2"><span>Lundi</span> <span class="text-gray-400">Fermé</span></li>
-                                    <li class="flex justify-between border-b border-gray-100 pb-2"><span>Mardi - Vendredi</span> <span class="font-bold text-charcoal">09:00 - 18:30</span></li>
-                                    <li class="flex justify-between border-b border-gray-100 pb-2"><span>Samedi</span> <span class="font-bold text-charcoal">08:00 - 16:00</span></li>
-                                    <li class="flex justify-between"><span>Dimanche</span> <span class="text-gray-400">Fermé</span></li>
-                                </ul>
-                                <p class="text-xs text-mocha mt-4 italic opacity-60">* Horaires indicatifs</p>
+                                <p class="text-charcoal text-xl font-serif italic">Sur rendez-vous</p>
                             </div>
                         </div>
                     </div>
@@ -535,14 +529,14 @@ const groupedServices = computed(() => {
                     <!-- Map -->
                     <!-- Map (Clickable to open Maps App) -->
                     <a 
-                        href="https://www.google.com/maps/search/?api=1&query=La+Prairie+1+1721+Cournillens+Su%C3%AD%C3%A7a" 
+                        href="https://www.google.com/maps/search/?api=1&query=46.859278,7.107389" 
                         target="_blank"
                         rel="noopener noreferrer"
                         class="block h-[450px] w-full bg-gray-200 rounded-3xl overflow-hidden border border-concrete/30 shadow-xl group relative cursor-pointer"
                     >
                          <!-- Google Maps Embed -->
                         <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2737.5686000000005!2d7.1073825!3d46.8592719!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDbCsDUxJzM0LjkiTiA3wrAwNiwyNS4zIkU!5e0!3m2!1sen!2sch!4v1612345678901!5m2!1sen!2sch" 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2737.5686000000005!2d7.107389!3d46.859278!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDbCsDUxJzMzLjQiTiA3wrAwNicyNi42IkU!5e0!3m2!1sen!2sch!4v1612345678901!5m2!1sen!2sch" 
                             width="100%" 
                             height="100%" 
                             style="border:0;" 
