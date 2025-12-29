@@ -43,29 +43,7 @@ Route::get('/studio', function () {
 Route::post('/appointments/slots', [App\Http\Controllers\AppointmentController::class, 'getSlots'])->name('appointments.slots');
 Route::post('/appointments', [App\Http\Controllers\AppointmentController::class, 'store'])->name('appointments.store');
 
-// Temporary Debug Route for Email
-Route::get('/test-email', function () {
-    try {
-        $mailer = config('mail.default');
-        $from = config('mail.from.address');
-        $host = config('mail.mailers.smtp.host');
-
-        \Illuminate\Support\Facades\Mail::raw('Test email from StudioF Server', function ($msg) {
-            $msg->to('fernandaconde021@gmail.com')
-                ->subject('Test Email connection');
-        });
-
-        return "<h1>Email Sent Successfully</h1>
-                <p>Mailer: <strong>$mailer</strong></p>
-                <p>From: <strong>$from</strong></p>
-                <p>Host: <strong>$host</strong></p>
-                <p>Check your inbox (and spam).</p>";
-    } catch (\Exception $e) {
-        return "<h1>Email Failed</h1>
-                <p>Error: " . $e->getMessage() . "</p>
-                <pre>" . $e->getTraceAsString() . "</pre>";
-    }
-});
+// Temporary Debug Route for Email - REMOVED
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');

@@ -189,6 +189,31 @@ class AppointmentController extends Controller
             \Illuminate\Support\Facades\Log::error('Email Error: ' . $e->getMessage());
         }
 
+        // Send WhatsApp Notification (CallMeBot)
+        $this->sendWhatsappNotification($service->name, $start, $validated['name'], $validated['phone']);
+
         return redirect()->route('contact')->with('success', 'Rendez-vous confirmé !');
+    }
+
+    private function sendWhatsappNotification($service, $date, $name, $phone)
+    {
+        try {
+            $phoneParams = env('WHATSAPP_PHONE');
+            $apiKey = env('WHATSAPP_API_KEY');
+
+            if (!$phoneParams || !$apiKey) {
+                return;
+            }
+
+            $dateFormatted = Carbon::parse($date)->format('d/m/Y H:i');
+            $text = "Nova Reserva!\nCliente: {$name}\nTel: {$phone}\nServiço: {$service}\nData: {$dateFormatted}";
+            $encodedText = urlencode($text);
+
+            $url = "https://api.callmebot.com/whatsapp.php?phone={$phoneParams}&text={$encodedText}&apikey={$apiKey}";
+
+            \Illuminate\Support\Facades\Http::get($url);
+        } catch (\Exception $e) {
+            \Illuminate\Support\Facades\Log::error('WhatsApp Support Error: ' . $e->getMessage());
+        }
     }
 }
